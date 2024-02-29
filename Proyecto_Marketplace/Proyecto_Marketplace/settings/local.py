@@ -11,6 +11,15 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':'tiendavirtual',
+        'USER'     : '90308578',
+        'PASSWORD' : 'AF4E0E621EEEA652A43A6DBDA92A7242666A575C7AD0EAB803D4A9678FEDD393',
+        'HOST'     : '10.44.1.159',
+        'PORT'     : '5432',
+        #'PCONNECT' :  True, 
+    },
+    'DB2_Authoring':{
         'ENGINE': 'ibm_db_django',
         'NAME':'coppeldb',
         'USER'     : 'ecomm',
