@@ -25,12 +25,17 @@ SECRET_KEY = 'django-insecure-+bbt=58bwv!7z0#^qn*r(9bltmkx^gc+g67v*6xh50_np)_k^-
 # Application definition
 
 INSTALLED_APPS = [
+    #'django.contrib.flatpages',
+    #'django.contrib.redirects',
+    #'django.contrib.comments',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Apps del proyecto
+    'apps.cargas_mkp',
 ]
 
 MIDDLEWARE = [
