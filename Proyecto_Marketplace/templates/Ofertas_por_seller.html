@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="uk-container uk-padding">
+    <div class="">
+        <form class="uk-form-horizontal" method="GET" action="">{% csrf_token %} 
+            <div class="uk-inline">
+                <div class="">
+                    <input class="uk-input" type="text" id="kword" name="kword" placeholder="Ingresa el SKU oh nombre de la tienda">
+                </div>
+                <div class="">
+                    <button class="uk-button-primary" type="submit">Buscar</button>
+                </div>
+            </div>
+         </form>
+    </div>
+   <div class=" uk-container uk-overflow-auto">
+    <table class="uk-table uk-table-divider uk-table-justify">
+        <thead>
+            <tr>
+                <th>nom_partnumber</th>
+                <th>idu_producto</th>
+                <th>nom_parentpartnumber</th>
+                <th>imp_precio</th>
+                <th>nom_tienda</th>
+                <th>fec_actualizacion</th>
+                <th>opc_estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for lf in catoffer%}
+            <tr>
+                <th>{{ lf.nom_partnumber}}</th>
+                <th>{{ lf.idu_producto.idu_producto}}</th>
+                <th>{{ lf.nom_parentpartnumber}}</th>
+                <th>{{ lf.imp_precio}}</th>
+                <th>{{ lf.nom_tienda}}</th>
+                <th>{{ lf.fec_actualizacion}}</th>
+                <th>{{ lf.opc_estatus}}</th>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+   </div>
+    
+</div>
+{% endblock content %}
